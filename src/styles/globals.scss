@@ -1,11 +1,15 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: light --default;
+}
 
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital@0;1&display=swap");
 .container {
   @apply mx-auto px-4 md:px-10;
 }
 body {
   overflow-x: hidden;
+  font-family: "Cormorant", serif;
 }
 
 .skeleton {
@@ -26,5 +30,14 @@ body {
   }
   &_w {
     @apply max-w-[1000px] w-full;
+  }
+}
+.btn {
+  @apply rounded-full shadow-none border-none outline-none;
+  &.btn-primary {
+    @apply bg-black hover:bg-gray-800;
+  }
+  &.btn-base {
+    @apply py-2 px-5 h-fit w-fit;
   }
 }
