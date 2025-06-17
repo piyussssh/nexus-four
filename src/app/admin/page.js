@@ -1,4 +1,5 @@
 import Faq from "@/components/Faq";
+import FaqInput from "@/components/FaqInput";
 
 export default function Admin() {
   const faqJson = [
@@ -54,6 +55,7 @@ export default function Admin() {
           </div>
           <div>
             <span className="text-gray-600">FAQs:</span>
+            <FaqInput/>
             {faqJson.map((faq, index) => {
               return <Faq key={index} index={index} faq={faq} />;
             })}
