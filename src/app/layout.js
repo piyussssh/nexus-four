@@ -1,4 +1,5 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar";
+import ReduxProvider from "@/store/ReduxProvider";
 import "@/styles/globals.scss";
 
 export const metadata = {
@@ -9,7 +10,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={` antialiased`}>
-        <Navbar/>{children}</body>
+        <Navbar/>
+        <ReduxProvider>{children}</ReduxProvider>
+        </body>
     </html>
   );
 }
